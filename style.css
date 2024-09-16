@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    /* Base Colors */
+    --bg-color: #f3f3f5;
+
+    /* Text Colors */
+    --text-color: #191919;
+    --text-color-2: rgba(0, 0, 0, .6);
+    --primary-text-color: #ff8243;
+
+    /* font family */
+    --font-one: "Protest Guerrilla", sans-serif;
+    --font-two: "Roboto", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    background: var(--bg-color);
+    font-family: var(--font-two);
+    background-repeat: no-repeat;
+    flex-direction: column;
+
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+button {
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+svg {
+    fill: var(--primary-text-color);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+}
+
+.btn {
+    padding: .7rem 1.2rem;
+    background: var(--button-color);
+    color: var(--primary-text-color);
+    border: .1rem solid white;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.15),
+        0px 1px 8px rgba(0, 0, 0, 0.01),
+        0px 10px 15px rgba(0, 0, 0, 0.03),
+        inset 0px 0px 25px rgba(255, 255, 255, 0.2);
+}
+
+.box_shadow {
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.15),
+        0px 1px 8px rgba(0, 0, 0, 0.01),
+        0px 10px 15px rgba(0, 0, 0, 0.03),
+        inset 0px 0px 25px rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover {
+    padding: .7rem 1.2rem;
+    background: var(--primary-text-color);
+    color: var(--text-color);
+    transition: all .2s ease-in-out;
+    border: .1rem solid black;
+}
+
+#title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: var(--font-two);
+    font-weight: bolder;
+    position: relative;
+    z-index: 111;
+    color: var(--text-color);
+}
+
+#title::before {
+    content: '';
+    width: 120%;
+    height: .3rem;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background: var(--primary-text-color);
+    border-radius: 5rem;
+    z-index: -1;
+}
+
+/* **** *** ***** */
+/* **** nav ***** */
+/* **** *** ***** */
+nav {
+    width: 100%;
+    max-width: 1280px;
+    height: 5rem;
+    background: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1111111;
+}
+
+nav .container .nav_logo a svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+nav .container {
+    justify-content: space-between;
+}
+
+
+nav .container .nav_links ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav .container .nav_links ul li a {
+    color: var(--text-color);
+}
+
+nav .container .nav_links ul li.active a,
+nav .container .nav_links ul li a:hover {
+    color: var(--primary-text-color);
+}
+
+nav .container .nav_button {
+    display: flex;
+    gap: 1rem;
+}
+
+nav .container .nav_button .cart {
+    background: var(--divider-color);
+    padding: .5rem;
+    position: relative;
+}
+
+nav .container .nav_button .cart svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+nav .container .nav_button .cart::after {
+    content: '0';
+    width: 1rem;
+    height: 1rem;
+    background: var(--primary-text-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    font-size: .6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+nav .container .menu_bar,
+nav .container .close_bar {
+    display: none;
+}
+
+nav .container .menu_bar svg,
+nav .container .close_bar svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+
+/* ***** *** ****** */
+/* **** slide ***** */
+/* ***** *** ****** */
+#slider {
+    width: 100%;
+    height: 100%;
+}
+
+#slider .container {
+    /* padding: 5rem 0; */
+    display: grid;
+    grid-template-columns: auto 420px;
+    overflow: hidden;
+}
+
+#slider .container .text_container {
+    justify-content: flex-start;
+}
+
+#slider .container .text_container h1 {
+    text-transform: capitalize;
+    font-family: var(--font-one);
+    font-size: clamp(3rem, 4vw + 1rem, 3.5rem);
+    color: var(--text-color);
+}
+
+#slider .container .text_container h1 span {
+    color: var(--primary-text-color);
+}
+
+#slider .container .slide_container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider .slide_container .image {
+    width: 500px;
+    height: 500px;
+    aspect-ratio: 1;
+    position: relative;
+    border-radius: 50%;
+    border: 5px solid var(--primary-text-color);
+    left: 30%;
+    transition: transform 1200ms cubic-bezier(0.15, 0.9, 0.25, 1.5);
+}
+
+#slider .slide_container .image .slide {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    transform: rotate(calc(360deg/4 * var(--i)));
+    transform-origin: 100%;
+    right: 45%;
+}
+
+#slider .slide_container .image .slide img {
+    width: 230px;
+    height: 230px;
+    position: absolute;
+}
+
+#slider .slide_container .slider_btn {
+    position: absolute;
+    bottom: 40%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#slider .slide_container .slider_btn button svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* ***** *** ****** */
+/* **** about ***** */
+/* ***** *** ****** */
+#about {
+    width: 100%;
+    height: 100%;
+}
+
+#about .container {
+    padding: 5rem 0;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+#about .container .content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 40% auto;
+    gap: 2rem;
+}
+
+#about .container .content .image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#about .container .content .image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    position: relative;
+    box-shadow: 1px 20px 18px rgba(0, 0, 0, 0.1),
+        0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#about .container .content .text_container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4rem;
+}
+
+#about .container .content .text_container p {
+    font-size: 1.1rem;
+    color: var(--text-color-2);
+}
+
+/* ---------- ----- ---------- */
+/* ---------- team ---------- */
+/* ---------- ----- ---------- */
+#team,#food{
+    width: 100%;
+    height: 100%;
+}
+#team .container,
+#food .container{
+    flex-direction: column;
+    gap: 5rem;
+    padding: 5rem 0;
+}
+#team .container .infoCard,
+#food .container .infoCard{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 2rem;
+}
+#team .container .infoCard .teamCards,
+#food .container .infoCard .foodCards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    place-items: center;
+    gap: 20px;
+}
+
+#team .container .infoCard .teamCards .card,
+#food .container .infoCard .foodCards .card {
+    width: 300px;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.5s;
+}
+#team .container .infoCard .teamCards .card:hover{
+    background: var(--primary-text-color);
+    box-shadow: 5px 5px 55px rgba(0,0,0,0.005),
+    1px 5px 45px rgba(0,0,0,0.25),
+    inset 5px 5px 20px rgba(255,255,255,0.5),
+    inset -2px -5px 15px rgba(0, 0, 0, .55);
+}
+#team .container .infoCard .teamCards .card:hover .image img{
+    filter: grayscale(0);
+}
+#team .container .infoCard .teamCards .card .image,
+#food .container .infoCard .foodCards .card .image{
+    width: 300px;
+    height: 100%;
+    grid-row: 1;
+    
+}
+#team .container .infoCard .teamCards .card .image img,
+#food .container .infoCard .foodCards .card .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+}
+#team .container .infoCard .teamCards .card .text,
+#food .container .infoCard .foodCards .card .text{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    gap: 1.5rem;
+}
+#team .container .infoCard .teamCards .card .text .info{
+    flex-direction: column;
+    gap: .2rem;
+}
+#team .container .infoCard .teamCards .card .text .socail_links{
+    width: 100%;
+    gap: 1rem;
+}
+#team .container .infoCard .teamCards .card .text .socail_links span{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: gray;
+}
+#team .container .infoCard .teamCards .card .text .socail_links span a{
+    color: whitesmoke;
+}
+#team .container .infoCard .teamCards .card:hover .text .socail_links span a{
+    color: var(--primary-text-color);
+}
+#team .container .infoCard .teamCards .card:hover .text .socail_links span a i{
+    font-size: 1.4rem;
+}
+#team .container .infoCard .teamCards .card:hover .text .socail_links span{
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .25),
+    inset -3px -3px 5px rgba(0, 0, 0, .2);
+}
+
+/* ---------- ----- ---------- */
+/* ---------- food ---------- */
+/* ---------- ----- ---------- */
+#food .container .infoCard .foodCards .card{
+    grid-template-rows: 40% 60%;
+    place-items: center;
+}
+#food .container .infoCard .foodCards .card .image img{
+    filter: grayscale(0);
+}
+#food .container .infoCard .foodCards .card .image img{
+    filter: grayscale(0);
+}
+#food .container .infoCard .foodCards .card .text{
+    width: 90%;
+}
+#food .container .infoCard .foodCards .card .text .info{
+    width: 100%;
+    justify-content: space-between;
+}
+#food .container .infoCard .foodCards .card .text .info .price{
+    padding: 0.5rem 0.9rem;
+    background: var(--primary-text-color);
+    color: white;
+    border-radius: 5rem;
+    font-size: .8rem;
+
+}
+/* ---------- ----- ---------- */
+/* ---------- media ---------- */
+/* ---------- ----- ---------- */
+@media only screen and (max-width: 900px) {
+    .container {
+        max-width: 95%;
+    }
+
+    nav .container .nav_links ul {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 2.5rem;
+    }
+
+    nav .container .nav_links ul li a {
+        font-size: 1.2rem;
+    }
+
+    nav .container .menu_bar,
+    nav .container .close_bar {
+        display: flex;
+    }
+
+    nav .container .close_bar {
+        padding: 1rem 2.5rem;
+    }
+
+    nav .container .nav_links {
+        width: 400px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        background: white;
+        z-index: 111;
+        display: none;
+    }
+
+    /* active */
+    nav.active .container .nav_links {
+        display: flex;
+    }
+}
+@media only screen and (max-width: 600px){
+    #slider .slide_container .slider_btn{
+        right: 30%
+    };
+}
+@media only screen and (max-width: 500px) {
+    nav .container .nav_links {
+        width: 100%;
+    }
+
+    #slider .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    #slider .container .slide_container {
+        height: 320px;
+    }
+
+    #slider .slide_container .image {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: -70%;
+    }
+
+    #slider .slide_container .image .slide {
+        right: 50%;
+    }
+    #slider .slide_container .slider_btn{
+        right: 0;
+    }
+
+    #about .container .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+}

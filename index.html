@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" class="center">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font awsome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body class="center">
+    <!-- nav -->
+    <nav class="center">
+        <div class="container center">
+            <div class="nav_logo">
+                <a>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                        <path
+                            d="m175-120-56-56 410-410q-18-42-5-95t57-95q53-53 118-62t106 32q41 41 32 106t-62 118q-42 44-95 57t-95-5l-50 50 304 304-56 56-304-302-304 302Zm118-342L173-582q-54-54-54-129t54-129l248 250-128 128Z" />
+                    </svg>
+                </a>
+
+            </div>
+            <div class="nav_links">
+                <!-- close bar -->
+                <div class="close_bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </div>
+                <ul>
+                    <li class="active"><a href="index.html" aria-current="page">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="menu.html">menu</a></li>
+                    <li><a href="reservations.html">reservation</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </div>
+            <div class="nav_button center">
+                <button class="cart center">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px">
+                        <path
+                            d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z" />
+                    </svg>
+                </button>
+                <button class="btn">book a table</button>
+                <!-- menu bar -->
+                <div class="menu_bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- slider -->
+    <section id="slider" class="center">
+        <div class="container">
+            <div class="text_container center">
+                <h1>look very delicious<br>are you <span>hungry?</span><br><span>order & reserved now!!!</span></h1>
+            </div>
+            <div class="slide_container">
+                <div class="image center">
+                    <div class="slide center" style="--i:1">
+                        <img src="image/slide/01.png">
+                    </div>
+                    <div class="slide center" style="--i:2">
+                        <img src="image/slide/02.png">
+                    </div>
+                    <div class="slide center" style="--i:3">
+                        <img src="image/slide/03.png">
+                    </div>
+                    <div class="slide center" style="--i:4">
+                        <img src="image/slide/04.png">
+                    </div>
+                </div>
+                <div class="slider_btn">
+                    <button class="upbtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e8eaed">
+                            <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+                        </svg>
+                    </button>
+                    <button class="downbtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e8eaed">
+                            <path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="center">
+        <div class="container center">
+            <div>
+                <h1 id="title">about us</h1>
+            </div>
+            <div class="content">
+                <div class="image center">
+                    <img src="image/about/chef.png">
+                </div>
+                <div class="text_container center">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae eius alias quam tempora
+                        inventore eaque unde animi. Rem animi ipsam inventore fugit officia doloremque eaque voluptas
+                        quod mollitia? Et, ab?
+                        Voluptates vero veritatis quod ullam? Quidem, possimus reiciendis. Rerum impedit ratione
+                        reiciendis laudantium magni commodi accusantium eius quis dolor inventore repellat quibusdam
+                        labore laborum necessitatibus, repellendus officia expedita! At, illo.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima ducimus illum veniam
+                        reprehenderit!<br><br>
+                        Exercitationem aliquam voluptatem dignissimos laborum explicabo nobis hic illo fugiat soluta.
+                        Voluptatem qui inventore natus quis exercitationem omnis tempore, officiis ab praesentium culpa,
+                        aliquam odio harum sunt deserunt accusamus! Quis.</p>
+                    <button class="btn">see more...</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- team -->
+    <section id="team" class="center">
+        <div class="container center">
+            <div class="text_context center">
+                <h1 id="title">our team</h1>
+            </div>
+            <div class="infoCard center">
+                <div class="teamCards center">
+                    <!-- card in teamcard.js  -->
+                </div>
+                <div>
+                    <div>
+                        <button class="btn">see more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- food -->
+    <section id="food" class="center">
+        <div class="container center">
+            <div class="text_context center">
+                <h1 id="title">our menu</h1>
+            </div>
+            <div class="infoCard center">
+                <div class="foodCards center">
+                    <!-- card in foodcard.js  -->
+                </div>
+                <div>
+                    <div>
+                        <button class="btn">see more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- script link -->
+    <script src="script.js"></script>
+    <script src="teamCard.js"></script>
+    <script src="foodCard.js"></script>
+</body>
+
+</html>
